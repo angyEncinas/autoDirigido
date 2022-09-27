@@ -48,4 +48,9 @@ describe("posicionInicial", () => {
     auto3.leercomando("DAIAD");
     expect(auto3.mostrarPosicion()).toEqual("1,1O");
   });
+  it("deberia verificar que no se puede retroceder si la ubicacion es 0,0", () => {
+    let auto4 = new Auto();
+    auto4.leercomando("IA");
+    expect(auto4.mostrarPosicion()).toEqual("0,0E");
+  });
 });
