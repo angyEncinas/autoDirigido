@@ -33,4 +33,9 @@ describe("posicionInicial", () => {
     auto.girarIzquierda();
     expect(auto.mostrarPosicion()).toEqual("1,1E");
   });
+  it("deberia moverse con comando simple", () => {
+    let auto2 = new Auto();
+    auto2.leercomando("ADA");
+    expect(auto2.mostrarPosicion()).toEqual("1,1O");
+  });
 });
