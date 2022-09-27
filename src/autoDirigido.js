@@ -14,6 +14,11 @@ class Auto {
   avanzarenY(){
     this.posY = this.posY + 1;
   }
+  girar(){
+    if(this.ubicacion == "N"){
+      this.ubicacion = "O"
+    }
+  }
 }
 
 export default Auto;

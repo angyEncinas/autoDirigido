@@ -13,4 +13,8 @@ describe("posicionInicial", () => {
     auto.avanzarenY();
     expect(auto.mostrarPosicion()).toEqual("1,1N");
   });
+  it("deberia girar a la derecha mostrando que esta mirando al oeste", () => {
+    auto.girar();
+    expect(auto.mostrarPosicion()).toEqual("1,1O");
+  });
 });
