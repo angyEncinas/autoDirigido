@@ -38,4 +38,14 @@ describe("posicionInicial", () => {
     auto2.leercomando("ADA");
     expect(auto2.mostrarPosicion()).toEqual("1,1O");
   });
+  it("deberia moverse con comando complejo", () => {
+    let auto3 = new Auto();
+    auto3.leercomando("AADAAIA");
+    expect(auto3.mostrarPosicion()).toEqual("3,2N");
+  });
+  it("deberia moverse con comando complejo", () => {
+    let auto3 = new Auto();
+    auto3.leercomando("DAIAD");
+    expect(auto3.mostrarPosicion()).toEqual("1,1O");
+  });
 });
