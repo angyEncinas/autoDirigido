@@ -14,7 +14,23 @@ describe("posicionInicial", () => {
     expect(auto.mostrarPosicion()).toEqual("1,1N");
   });
   it("deberia girar a la derecha mostrando que esta mirando al oeste", () => {
-    auto.girar();
+    auto.girarDerecha();
     expect(auto.mostrarPosicion()).toEqual("1,1O");
+  });
+  it("deberia girar a la derecha mostrando que esta mirando al sur", () => {
+    auto.girarDerecha();
+    expect(auto.mostrarPosicion()).toEqual("1,1S");
+  });
+  it("deberia girar a la derecha mostrando que esta mirando al este", () => {
+    auto.girarDerecha();
+    expect(auto.mostrarPosicion()).toEqual("1,1E");
+  });
+  it("deberia girar a la derecha mostrando que esta mirando al norte", () => {
+    auto.girarDerecha();
+    expect(auto.mostrarPosicion()).toEqual("1,1N");
+  });
+  it("deberia girar a la izquierda mostrando que esta mirando al Este", () => {
+    auto.girarIzquierda();
+    expect(auto.mostrarPosicion()).toEqual("1,1E");
   });
 });
