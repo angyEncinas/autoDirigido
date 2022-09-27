@@ -5,8 +5,14 @@ class Auto {
     this.ubicacion = "N"
   }
 
-  mover() {
+  mostrarPosicion() {
     return this.posX.toString() + ","+this.posY.toString()+this.ubicacion;
+  }
+  avanzarenX(){
+    this.posX = this.posX + 1;
+  }
+  avanzarenY(){
+    this.posY = this.posY + 1;
   }
 }
 
