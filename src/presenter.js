@@ -1,15 +1,15 @@
-import sumar from "./sumador";
+import Auto from "./autoDirigido";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+const comando = document.querySelector("#comando");
+const form = document.querySelector("#comando-form");
 const div = document.querySelector("#resultado-div");
-
+let autoDirigido = new Auto();
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const comandoALeer = comando.value;
+  autoDirigido.leercomando(comandoALeer);
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+
+  div.innerHTML = "<p>" + "Su posicion actual es: " + autoDirigido.mostrarPosicion() + "</p>";
 });

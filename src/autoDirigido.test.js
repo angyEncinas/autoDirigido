@@ -13,7 +13,17 @@ describe("posicionInicial", () => {
     auto.avanzarenY();
     expect(auto.mostrarPosicion()).toEqual("1,1N");
   });
+  it("deberia retroceder solo en el eje x", () => {
+    auto.retrocederenX();
+    expect(auto.mostrarPosicion()).toEqual("0,1N");
+  });
+  it("deberia retroceder solo en el eje y", () => {
+    auto.retrocederenY();
+    expect(auto.mostrarPosicion()).toEqual("0,0N");
+  });
   it("deberia girar a la derecha mostrando que esta mirando al oeste", () => {
+    auto.avanzarenX();
+    auto.avanzarenY();
     auto.girarDerecha();
     expect(auto.mostrarPosicion()).toEqual("1,1O");
   });
